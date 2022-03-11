@@ -22,7 +22,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    
+      - run: pwd
+      - name: Print working directory
+      
       #Push to AWS ECR
       - run: docker build --tag mc-server:v1 .
       - name: Push to ECR
